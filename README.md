@@ -302,3 +302,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/mohitvij05/recoveriq.git
 cd recoveriq
+
+## 🌐 Live Demo
+
+**RecoverIQ:** https://recoveriq-alpha.vercel.app
