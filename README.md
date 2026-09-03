@@ -172,3 +172,131 @@ When the original payment method has poor recovery potential but an alternative 
                         │
                         ▼
                     Audit Trail
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- Next.js App Router
+
+### Decision & Simulation Engine
+- TypeScript-based transaction modeling
+- Recovery probability calculations
+- Expected recovery value calculations
+- Recovery cost and friction modeling
+- Risk penalty calculations
+- Decision policy engine
+- Deterministic transaction simulation
+
+### Development & Deployment
+- Git
+- GitHub
+- Vercel
+
+
+
+## 🧠 How the Decision Engine Works
+
+RecoverIQ does not simply retry every failed transaction.
+
+For each transaction, the engine evaluates factors such as:
+
+- Transaction amount
+- Payment method
+- Failure reason
+- Previous attempts
+- Customer intent
+- Network quality
+- Bank health
+- Risk score
+
+These signals are used to estimate the probability and economic value of recovery.
+
+The engine then considers:
+
+Recovery Probability
+        ↓
+Expected Recovery Value
+        ↓
+Recovery Cost
+        ↓
+Customer Friction Cost
+        ↓
+Risk Penalty
+        ↓
+Expected Net Value
+        ↓
+Decision Policy
+        ↓
+Recommended Action
+
+
+
+## 📊 Application Modules
+
+| Module | Purpose |
+|---|---|
+| Dashboard | Overall recovery and revenue intelligence |
+| Revenue at Risk | Identify potentially recoverable failed revenue |
+| Decision Center | Understand AI/decision recommendations |
+| Recovery Queue | Track transactions requiring recovery action |
+| Analytics | Measure recovery performance |
+| Audit | Provide decision and outcome visibility |
+| Simulation | Test different transaction scenarios |
+| Settings | Manage application configuration |
+
+---
+
+## 🧪 Simulation Scenarios
+
+RecoverIQ provides predefined scenarios to demonstrate how different transaction conditions influence the recommended action.
+
+### High-Value Recovery
+
+Tests a high-value transaction with strong recovery conditions.
+
+Expected behavior:
+
+`RECOVER_NOW`
+
+### Low-Value / Uneconomic
+
+Tests a lower-value transaction with weaker conditions and previous attempts.
+
+Expected behavior may include:
+
+`WAIT`
+
+or
+
+`DON'T_RECOVER`
+
+### Change Payment Method
+
+Tests a failed transaction where an alternative payment method may provide better recovery potential.
+
+Expected behavior:
+
+`CHANGE_METHOD`
+
+The Simulation Lab allows users to modify transaction conditions and observe how the decision changes.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mohitvij05/recoveriq.git
+cd recoveriq
